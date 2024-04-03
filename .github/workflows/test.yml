@@ -100,6 +100,7 @@ jobs:
       - name: Build the project
         working-directory: ${{ env.backend-dir }}
         run: |
+          echo pwd
           echo "ENV=dev" > .env
           docker-compose up -d --build backend
       - name: Lint the code
