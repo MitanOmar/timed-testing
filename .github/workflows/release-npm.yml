@@ -15,9 +15,6 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
-      - name: Change the dir
-        run: cd ./frontend
-
       - name: Install pnpm
         uses: pnpm/action-setup@v2.4.0
         with:
