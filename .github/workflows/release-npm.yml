@@ -16,7 +16,7 @@ jobs:
           persist-credentials: false
 
       - name: Change the dir
-        run: cd ${{ env.frontend-dir }}
+        run: cd ./frontend
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2.4.0
