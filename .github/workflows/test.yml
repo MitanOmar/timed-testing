@@ -98,6 +98,7 @@ jobs:
           restore-keys: |
             peotry-
       - name: Build the project
+        working-directory: ${{ env.backend-dir }}
         run: |
           echo "ENV=dev" > .env
           docker-compose up -d --build backend
