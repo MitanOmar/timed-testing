@@ -1,15 +1,16 @@
 name: Test
 
 on:
-  push:
-    branches:
-      - beta
-      - main
-      - renovate/**
-  pull_request:
-    branches:
-      - beta
-      - main
+  workflow_dispatch
+  # push:
+  #   branches:
+  #     - beta
+  #     - main
+  #     - renovate/**
+  # pull_request:
+  #   branches:
+  #     - beta
+  #     - main
 
 env:
   NODE_VERSION: 18
