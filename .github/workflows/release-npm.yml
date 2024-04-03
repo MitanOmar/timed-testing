@@ -21,7 +21,7 @@ jobs:
           version: 7
 
       - name: Change the dir
-        run: cd ${{ env.frontend-dir }}
+        run: cd /home/runner/work/timed-testing/timed-testing/frontend
 
       - uses: actions/setup-node@v4
         with:
