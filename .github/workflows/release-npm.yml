@@ -30,7 +30,7 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
-        working-directory: ${{ env.frontend-dir }}
+        working-directory: ./frontend
 
       - name: Release on NPM
         run: pnpm semantic-release
