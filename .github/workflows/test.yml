@@ -86,6 +86,9 @@ jobs:
 
   test-backend:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ env.backend-dir }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/cache@v3
