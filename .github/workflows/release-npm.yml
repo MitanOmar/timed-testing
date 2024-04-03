@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: "18"
           cache: "pnpm"
-          cache-dependency-path: frontend/pnpm-lock.json
+          cache-dependency-path: ${{ env.frontend-dir }}/pnpm-lock.json
 
       - name: Install dependencies
         run: pnpm install
