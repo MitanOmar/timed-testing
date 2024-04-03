@@ -15,13 +15,13 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
+      - name: Change the dir
+        run: cd ${{ env.frontend-dir }}
+
       - name: Install pnpm
         uses: pnpm/action-setup@v2.4.0
         with:
           version: 7
-
-      - name: Change the dir
-        run: cd /home/runner/work/timed-testing/timed-testing/frontend
 
       - uses: actions/setup-node@v4
         with:
