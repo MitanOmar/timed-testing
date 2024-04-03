@@ -93,7 +93,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/cache@v3
         with:
-          path: ${{ env.backend-dir }}/.venv
+          path: ${{ env.backend-dir }}
           key: poetry-${{ hashFiles('poetry.lock')}}
           restore-keys: |
             peotry-
