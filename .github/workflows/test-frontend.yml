@@ -1,21 +1,21 @@
-name: Test
+name: Test Frontend
 
 on:
-  workflow_dispatch
-  # push:
-  #   branches:
-  #     - beta
-  #     - main
-  #     - renovate/**
-  # pull_request:
-  #   branches:
-  #     - beta
-  #     - main
+  push:
+    paths:
+      - './frontend/**'
+    branches:
+      - beta
+      - main
+      - renovate/**
+  pull_request:
+    branches:
+      - beta
+      - main
 
 env:
   NODE_VERSION: 18
   frontend-dir: ./frontend
-  backend-dir: ./backend
 
 jobs:
   lint-frontend:
@@ -83,29 +83,3 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
           file: ./coverage/lcov.info
-
-  test-backend:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ${{ env.backend-dir }}
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v3
-        with:
-          path: ${{ env.backend-dir }}
-          key: poetry-${{ hashFiles('./backend/poetry.lock')}}
-          restore-keys: |
-            peotry-
-      - name: Build the project
-        working-directory: ${{ env.backend-dir }}
-        run: |
-          echo "ENV=dev" > .env
-          docker compose up -d --build backend
-      - name: Lint the code
-        run: |
-          docker compose exec -T backend black --check .
-          docker compose exec -T backend flake8
-          docker compose exec -T backend python manage.py makemigrations --check --dry-run --no-input
-      - name: Run pytest
-        run: docker compose exec -T backend pytest --no-cov-on-fail --cov --create-db -vv
