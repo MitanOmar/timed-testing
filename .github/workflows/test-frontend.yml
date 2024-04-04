@@ -9,9 +9,7 @@ on:
   pull_request:
     paths:
       - './frontend/**'
-    branches:
-      - beta
-      - main
+    branches: ["beta", "main"]
 
 env:
   NODE_VERSION: 18
