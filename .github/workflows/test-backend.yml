@@ -23,7 +23,7 @@ jobs:
       run:
         working-directory: ${{ env.backend-dir }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: actions/cache@v3
         with:
           path: ${{ env.backend-dir }}
