@@ -46,6 +46,7 @@ export default class IndexRoute extends Route {
    */
   model({ day }) {
     console.log("This is the change");
+    console.log("This is another change");
     return day ? moment(day, DATE_FORMAT) : moment(DATE_FORMAT);
   }
 

@@ -9,9 +9,7 @@ on:
   pull_request:
     paths:
       - './backend/**'
-    branches:
-      - beta
-      - main
+    branches: ["beta", "main"]
 
 env:
   backend-dir: ./backend
