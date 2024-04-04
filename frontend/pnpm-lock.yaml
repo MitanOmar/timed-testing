@@ -9,8 +9,8 @@ overrides:
 
 devDependencies:
   '@adfinis/eslint-config':
-    specifier: 2.0.0
-    version: 2.0.0(@babel/core@7.22.9)(@babel/eslint-parser@7.21.3)(eslint-config-prettier@8.8.0)(eslint-plugin-ember@11.5.2)(eslint-plugin-import@2.28.1)(eslint-plugin-n@15.7.0)(eslint-plugin-prettier@4.2.1)(eslint-plugin-qunit@7.3.4)(eslint@8.46.0)(prettier@2.8.8)
+    specifier: 2.1.1
+    version: 2.1.1(@babel/core@7.22.9)(@babel/eslint-parser@7.21.3)(eslint-config-prettier@8.8.0)(eslint-plugin-ember@11.5.2)(eslint-plugin-import@2.28.1)(eslint-plugin-n@15.7.0)(eslint-plugin-prettier@4.2.1)(eslint-plugin-qunit@7.3.4)(eslint@8.46.0)(prettier@2.8.8)
   '@adfinis/semantic-release-config':
     specifier: 4.0.0
     version: 4.0.0
@@ -334,21 +334,31 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /@adfinis/eslint-config@2.0.0(@babel/core@7.22.9)(@babel/eslint-parser@7.21.3)(eslint-config-prettier@8.8.0)(eslint-plugin-ember@11.5.2)(eslint-plugin-import@2.28.1)(eslint-plugin-n@15.7.0)(eslint-plugin-prettier@4.2.1)(eslint-plugin-qunit@7.3.4)(eslint@8.46.0)(prettier@2.8.8):
-    resolution: {integrity: sha512-jfD8GUBZwwbO6S7d/VLSwZ57tNdM3uD9R2Mgi9uh5/Mr6SCOeJ/CH/9LrxtqxIWASqDvyCmDh7SMsWaVHfqpCQ==}
+  /@adfinis/eslint-config@2.1.1(@babel/core@7.22.9)(@babel/eslint-parser@7.21.3)(eslint-config-prettier@8.8.0)(eslint-plugin-ember@11.5.2)(eslint-plugin-import@2.28.1)(eslint-plugin-n@15.7.0)(eslint-plugin-prettier@4.2.1)(eslint-plugin-qunit@7.3.4)(eslint@8.46.0)(prettier@2.8.8):
+    resolution: {integrity: sha512-MXbEJjlCYg8x/dcKkOySMCd7FTpamlvvoF9F9YpqLPx9HCHB2/pDFe/bDbYZ/WbnR2XArilJScHBZ87gmiIx7w==}
     peerDependencies:
-      '@babel/core': ^7.21.4
-      '@babel/eslint-parser': ^7.21.3
-      eslint: ^8.39.0
-      eslint-config-prettier: ^8.8.0
-      eslint-plugin-ember: ^11.5.2
-      eslint-plugin-import: ^2.27.5
-      eslint-plugin-n: ^15.7.0
-      eslint-plugin-prettier: ^4.2.1
-      eslint-plugin-qunit: ^7.3.4
-      prettier: ^2.8.8
+      '@babel-plugin-proposal-decorators': '*'
+      '@babel/core': '>= 7'
+      '@babel/eslint-parser': '>= 7'
+      '@babel/plugin-proposal-decorators': '>= 7'
+      eslint: '>= 8'
+      eslint-config-prettier: '>= 9'
+      eslint-plugin-ember: '>= 12'
+      eslint-plugin-import: '>= 2'
+      eslint-plugin-n: '>= 16'
+      eslint-plugin-prettier: '>= 5'
+      eslint-plugin-qunit: '>= 8'
+      prettier: '>= 3'
     peerDependenciesMeta:
+      '@babel-plugin-proposal-decorators':
+        optional: true
       '@babel/core':
+        optional: true
+      eslint-plugin-ember:
+        optional: true
+      eslint-plugin-n:
+        optional: true
+      eslint-plugin-qunit:
         optional: true
     dependencies:
       '@babel/core': 7.22.9
@@ -4324,9 +4334,6 @@ packages:
 
   /ajv-formats@2.1.1:
     resolution: {integrity: sha512-Wx0Kx52hxE7C18hkMEggYlEifqWZtYaRgouJor+WMdPnQyEK13vgEWyVNup7SoeeoLMsr4kf5h6dOW11I15MUA==}
-    peerDependenciesMeta:
-      ajv:
-        optional: true
     dependencies:
       ajv: 8.12.0
     dev: true
