@@ -2,13 +2,13 @@ name: Test Frontend
 
 on:
   push:
-    paths:
-      - './frontend/**'
     branches:
       - beta
       - main
       - renovate/**
   pull_request:
+    paths:
+      - './frontend/**'
     branches:
       - beta
       - main
