@@ -2,16 +2,11 @@ name: Test Backend
 
 on:
   push:
-    paths:
-      - './backend/**'
-    branches:
-      - beta
-      - main
-      - renovate/**
+    branches: ["main", "beta"]
   pull_request:
+    branches: ["main", "beta"]
     paths:
-      - './backend/**'
-    branches: ["beta", "main"]
+      - 'backend/**'
 
 env:
   backend-dir: ./backend
