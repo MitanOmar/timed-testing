@@ -21,7 +21,7 @@ jobs:
         working-directory: ${{ env.backend-dir }}
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: ${{ env.backend-dir }}
           key: poetry-${{ hashFiles('./backend/poetry.lock')}}
