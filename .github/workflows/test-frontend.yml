@@ -6,8 +6,6 @@ on:
       - './frontend/**'
     branches: ["main", "beta"]
   pull_request:
-    paths:
-      - './frontend/**'
     branches: ["main", "beta"]
 
 env:
