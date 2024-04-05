@@ -4,14 +4,11 @@ on:
   push:
     paths:
       - './frontend/**'
-    branches:
-      - beta
-      - main
-      - renovate/**
+    branches: ["main", "beta"]
   pull_request:
     paths:
       - './frontend/**'
-    branches: [beta, main]
+    branches: ["main", "beta"]
 
 env:
   NODE_VERSION: 18
