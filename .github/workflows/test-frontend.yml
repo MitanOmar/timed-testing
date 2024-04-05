@@ -2,13 +2,11 @@ name: Test Frontend
 
 on:
   push:
-    paths:
-      - './frontend/**'
     branches: ["main", "beta"]
   pull_request:
-    paths:
-      - './frontend/**'
     branches: ["main", "beta"]
+    paths:
+      - 'frontend/**'
 
 env:
   NODE_VERSION: 18
