@@ -3,6 +3,8 @@ name: Test Frontend
 on:
   push:
     branches: ["main", "beta"]
+    paths:
+      - 'frontend/**'
   pull_request:
     branches: ["main", "beta"]
     paths:
