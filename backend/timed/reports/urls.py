@@ -5,8 +5,6 @@ from . import views
 
 r = SimpleRouter(trailing_slash=settings.APPEND_SLASH)
 
-print("This is the backend change")
-
 r.register(r"work-reports", views.WorkReportViewSet, "work-report")
 r.register(r"year-statistics", views.YearStatisticViewSet, "year-statistic")
 r.register(r"month-statistics", views.MonthStatisticViewSet, "month-statistic")
